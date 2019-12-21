@@ -1,0 +1,11 @@
+extends admin_layout
+
+block content
+    h3 #{question.description}
+    h3 #{question.option1}
+    h3 #{question.option2} 
+    h3 #{question.option3}
+    h3 #{question.option4}
+    h3 #{question.answer}
+    a.btn.btn-default(href='/questions/edit/'+question._id) Edit
+    a.btn.btn-danger.delete-question(href="#",data-id=question._id) Delete

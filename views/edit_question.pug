@@ -1,0 +1,27 @@
+extends admin_layout
+
+block content
+    h1 #{title}
+    form(method="post" ,action='/questions/edit/'+question._id )
+        #from-group
+            label Question title:
+            input.form-control(name='title',type='text',value=question.title)
+        #from-group
+            label Question description:
+            input.form-control(name='description',type='text',value=question.description)
+        #from-group
+            label option 1:
+            input.form-control(name='option1',type='text',value=question.option1)
+        #from-group
+            label option 2:
+            input.form-control(name='option2',type='text',value=question.option2)
+        #from-group
+            label option 3:
+            input.form-control(name='option3',type='text',value=question.option3)
+        #from-group
+            label option 4:
+            input.form-control(name='option4',type='text',value=question.option4)
+        #from-group
+            label Answer :
+            input.form-control(name='answer',type='text',value=question.answer)
+        input.btn.btn-primary(type='submit',value='Save')

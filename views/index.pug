@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    if user    
+        h1 Hi #{user.name}
+        form(action='/users/testAttempt/'+user._id ,method='POST')
+            #from-group
+                label Please Enter Set:
+                input.form-control(name='set',type='text')
+            input.btn.btn-primary(type='submit',value='Login')
+    else
+        h1 Hi! login to Attempt test!

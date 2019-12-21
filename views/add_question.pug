@@ -1,0 +1,27 @@
+extends admin_layout
+
+block content
+    h1 #{title}
+    form(action="/questions/add" method="POST")
+        #from-group
+            label Question title:
+            input.form-control(name='title',type='text')
+        #from-group
+            label Question description:
+            input.form-control(name='description',type='text')
+        #from-group
+            label Option 1:
+            input.form-control(name='option1',type='text')
+        #from-group
+            label Option 2:
+            input.form-control(name='option2',type='text')
+        #from-group
+            label Option 3:
+            input.form-control(name='option3',type='text')
+        #from-group
+            label Option 4:
+            input.form-control(name='option4',type='text')
+        #from-group
+            label Answer:
+            input.form-control(name='answer',type='text')
+        input.btn.btn-primary(type='submit',value='Add')

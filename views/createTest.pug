@@ -1,0 +1,7 @@
+extends admin_layout
+
+block content
+    ul.list-group
+        each question,i in questions
+            li.list-group-item
+                a(href="/tests/question/"+question._id)=question.title

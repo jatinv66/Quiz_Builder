@@ -1,0 +1,14 @@
+extends admin_layout
+
+block content
+        h3 #{question.description}
+        h3 #{question.option1}
+        h3 #{question.option2}
+        h3 #{question.option3}
+        h3 #{question.option4}
+        h3 #{question.answer}
+        form(method='POST', action='/tests/add_question_to_test/'+question._id)
+            #form-group
+                label Mention Set:
+                input.form-control(name='set', type='text')
+            input.btn.btn-primary(type='submit',value='Add to test')
